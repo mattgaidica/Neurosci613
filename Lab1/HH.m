@@ -1,4 +1,4 @@
-function [t,v,spiketimes,isis] = HH(pulsei)
+function [t,v,spiketimes,isis] = HH(pulsei,makeplot) %i in uA/cm^2
 
 %RUN by entering the following at the matlab command window prompt:
 %  [t,v,spiketimes,isis]=HH(amplitude of desired current pulse);
@@ -21,8 +21,14 @@ spiketimes=t(locs);
 isis=diff(spiketimes);
 
 % plot Voltage vs time
-plot(t,v(:,1),spiketimes,peaks,'*')
-
+if(makeplot)
+    %figure;
+    hold on
+    plot(t,v(:,1),spiketimes,peaks,'*')
+    title('HH Model')
+    xlabel('Time (ms)')
+    ylabel('Voltage (uV)')
+end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Define a function containing the HH equations. Input parameter 
     % pulsei that is amplitude of applied current pulse 

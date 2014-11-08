@@ -55,7 +55,7 @@ end
        
 %Plot the neuron’s membrane potential.
 t_tot=[0:deltat:tend-deltat]';
-plot(t_tot,v_tot);
+% plot(t_tot,v_tot);
 
 %compute interspike intervals
 isis=diff(spiketimes);
