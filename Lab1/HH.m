@@ -1,4 +1,5 @@
-function [t,v,spiketimes,isis] = HH(pulsei,makeplot) %i in uA/cm^2
+function [t,v,spiketimes,isis] = HH(pulsei) %i in uA/cm^2
+makeplot=true;
 
 %RUN by entering the following at the matlab command window prompt:
 %  [t,v,spiketimes,isis]=HH(amplitude of desired current pulse);
