@@ -1,4 +1,4 @@
-function [t_tot,v_tot,u_tot,spiketimes,isis1,isis2,s_tot]=ILIF2cells(pulsei)
+function [t_tot,v_tot,u_tot,spiketimes,isis1,isis2,s_tot]=ILIF2cells(gsyn,taus)
 
 %RUN by entering the following at the matlab command window prompt:
 %  [t,v,u,spiketimes,isis1,isis2,s]=ILIF2cells(amplitude of desired current pulse);
@@ -11,8 +11,9 @@ d=8;
 vthresh=30;
 vpeak=35;
 % set synapse parameter values
-gsyn=0;
-taus=15;
+pulsei=8;
+% gsyn=3;
+% taus=47;
 % set constant applied current
 Iapp = pulsei;
 
@@ -79,9 +80,9 @@ end
 
 
 %Plot the neuron’s membrane potential.
-figure(1)
 t_tot=[0:deltat:tend-deltat]';
-plot(t_tot,v_tot(:,1),t_tot,v_tot(:,2),'r');
+% figure(1)
+% plot(t_tot,v_tot(:,1),t_tot,v_tot(:,2),'r');
 
 %compute interspike intervals
 isis1=[];
