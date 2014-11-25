@@ -16,7 +16,7 @@ taus=5;
 
 % set applied current, pulse or constant
 % constant applied current
-%Iapp = 4*ones(50,1);
+% Iapp = 4*ones(50,1);
 Iapp = 2*ones(50,1);
 Iapp(10)=4;
 
