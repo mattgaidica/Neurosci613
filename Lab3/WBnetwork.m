@@ -1,4 +1,4 @@
-function [spiketimes]=WBnetwork(n,W)
+function [spiketimes,avcfreq1,avcfreq2]=WBnetwork(n,W,taus)
 
 %RUN by entering the following at the matlab command window prompt:
 %  [spiketimes]=WBnetwork(n,W);
@@ -8,7 +8,8 @@ num = n;
 
 %%
 % % set synapse parameter values
-gsyn = 0.001; taus = 3;
+gsyn = 0.001; 
+%taus = 3;
 
 
 %% Solve WB network model

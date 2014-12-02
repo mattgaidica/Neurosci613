@@ -12,7 +12,7 @@ vthresh=30;
 
 % set synapse parameter values
 gsyn=-2;
-taus=15;
+taus=10;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set applied current, pulse or constant

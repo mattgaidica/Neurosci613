@@ -8,18 +8,18 @@
 % set network size n 
 n = 50;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % nearest neighbor coupling
-% % set radius of connectivity crad, # of outgoing synapses per neuron =
-% % 2*crad
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% nearest neighbor coupling
+% set radius of connectivity crad, # of outgoing synapses per neuron =
+% 2*crad
 % crad = 1;
 % 
 % W = zeros(n);
 % for k=1:crad
 %     W = W +diag(ones(n-k,1),k)+diag(ones(n-k,1),-k);
 % end
-% 
-% % add synapses to end cells = periodic boundary conditions
+
+% add synapses to end cells = periodic boundary conditions
 % for k=crad:-1:1
 %     for j=crad:-1:k
 %         W(n-(j-k),k) = 1;
@@ -27,7 +27,7 @@ n = 50;
 %     end
 % end
 % clear crad j k
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % all-to-all coupling

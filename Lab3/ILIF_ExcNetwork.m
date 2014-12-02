@@ -1,4 +1,4 @@
-function [spiketimes]=ILIF_ExcNetwork(n,W)
+function [spiketimes]=ILIF_ExcNetwork(n,W,taus)
 
 %RUN by entering the following at the matlab command window prompt:
 %  [spiketimes]=ILIF_ExcNetwork(n,W);
@@ -11,8 +11,8 @@ d=8;
 vthresh=30;
 
 % set synapse parameter values
-gsyn=5;
-taus=5;
+gsyn=.001;
+% taus=1;
 
 % set applied current, pulse or constant
 % constant applied current
