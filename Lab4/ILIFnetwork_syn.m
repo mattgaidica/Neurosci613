@@ -11,7 +11,7 @@ d=2;
 vthresh=30;
 
 % set synapse parameter values
-gsyn=0/n;
+gsyn=-2/n;
 taus=40;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,7 +22,7 @@ taus=40;
 %Iapp(10)=4;
 
 % heterogeneous constant applied current
-sigma=0;
+sigma=.7;
 Iapp = 6*ones(50,1)+sigma*rand(50,1);
 
 % pulse of applied current
@@ -99,7 +99,7 @@ end
 
 % Plot raster plot
 figure(1)
-plot(spiketimes(:,1),spiketimes(:,2),'.')
+plot(spiketimes(:,1),spiketimes(:,2),'*')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % consider final 500 msec of simulation
