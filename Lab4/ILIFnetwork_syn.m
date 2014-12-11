@@ -1,4 +1,4 @@
-function [spiketimes,freqs,nisis,Iapp]=ILIFnetwork_syn(n,W)
+function [spiketimes,freqs,nisis,Iapp]=ILIFnetwork_syn(n,W,gsynNum)
 
 %RUN by entering the following at the matlab command window prompt:
 %  [spiketimes,freqs,nisis,Iapp]=ILIFnetwork_syn(n,W);
@@ -11,7 +11,7 @@ d=2;
 vthresh=30;
 
 % set synapse parameter values
-gsyn=-2/n;
+gsyn=gsynNum/n;
 taus=40;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,7 +22,7 @@ taus=40;
 %Iapp(10)=4;
 
 % heterogeneous constant applied current
-sigma=.7;
+sigma=.5;
 Iapp = 6*ones(50,1)+sigma*rand(50,1);
 
 % pulse of applied current
@@ -134,9 +134,10 @@ fprintf('Average network frequency is %10.3f \n',avnfreq)
 % plot time histogram of cell spiking
 figure(2)
 tbin=(0:2:1000);
+counts=hist(spiketimes(:,1),tbin);
 hist(spiketimes(:,1),tbin);
-
-figure(1)
+% 
+% figure(1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % %Plot the neuron’s membrane potential.

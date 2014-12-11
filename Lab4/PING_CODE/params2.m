@@ -15,9 +15,9 @@ p_ee=1.0; p_ei=1.0; p_ie=1.0; p_ii=1.0;
 %-----------------------------------
 % rise and decay time constants associated with synapses:
 tau_r_e=0.1*ones(num_e,1); tau_d_e=3*ones(num_e,1); 
-tau_r_i=0.3*ones(num_i,1); 
+tau_r_i=0.3*ones(num_i,1);
 
-tau_d_i_value = 9;
+tau_d_i_value = 60;
 tau_d_i=tau_d_i_value*ones(num_i,1); 
 %-----------------------------------
 

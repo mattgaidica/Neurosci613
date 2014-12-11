@@ -1,13 +1,14 @@
 % gamma_simulator.m
 
-clear; rand('twister',5489); randn('state',0); 
+% clear;
+rand('twister',5489); randn('state',0); 
 tic; 
 
 % uncomment name of parameter file to run
-params0;
+% params0;
 %params1; 
-%params2;
-%params3;
+% params2;
+params3;
 
 dt05=dt/2; m_steps=floor(t_final/dt+0.1); r_e=exp(-dt05/tau_d_stoch_e); r_i=exp(-dt05/tau_d_stoch_i);
 
@@ -126,7 +127,7 @@ fprintf('Average E network frequency in Hz is %10.3f \n',avnfreq)
 figure(2)
 tbin=(0:1:200);
 hist(spiketimes_e(:,1),tbin);
-
+counts=hist(spiketimes_e(:,1),tbin);
 figure(1)
 
 toc;
